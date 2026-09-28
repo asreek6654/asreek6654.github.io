@@ -1,7 +1,7 @@
 ---
 layout: home.njk
-title: home
-nav: home
+title: about
+nav: about
 order: 1
 ---
 I'm a Ph.D. candidate in electrical engineering at Stanford University, advised by [Ram Rajagopal](https://profiles.stanford.edu/ram-rajagopal). I'm also a Burt and Deedee McMurtry Fellow.

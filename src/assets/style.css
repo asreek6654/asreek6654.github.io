@@ -30,10 +30,9 @@ svg { flex-shrink: 0; }
 .skip-link:focus { top: 8px; }
 
 /* Shared navigation and profile. Add pages through their Markdown header. */
-.site-name { font-size: 2.375rem; font-weight: 500; line-height: 1.2; letter-spacing: -.8px; margin: 0 0 18px; }
-.site-name a { color: inherit; }
-.site-name a:hover { text-decoration: none; }
-.site-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 25px; padding-bottom: 20px; border-bottom: 1px solid var(--rule); }
+.site-header { display: flex; align-items: center; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--rule); }
+.site-name { font-size: 2.375rem; font-weight: 500; line-height: 1.2; letter-spacing: -.8px; margin: 0; }
+.site-nav { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px 25px; margin-left: auto; }
 .site-nav a, .theme-toggle { color: var(--soft); font-size: .875rem; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 32px; }
 .site-nav [aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: 8px; }
@@ -80,12 +79,17 @@ svg { flex-shrink: 0; }
 /* Narrow screens: contacts left, photo right, then full-width page content. */
 @media (max-width: 800px) {
   body { padding: 28px 22px 32px; }
-  .site-name { font-size: 2rem; margin-bottom: 14px; }
+  .site-name { font-size: 2rem; }
   .site-nav { gap: 8px 23px; }
   .site-main { display: flex; flex-direction: column; gap: 28px; margin-top: 28px; }
   .identity { display: grid; grid-template-columns: minmax(0, 1fr) min(50%, 180px); gap: 22px; align-items: center; }
   .portrait { width: 100%; grid-column: 2; grid-row: 1; }
   .contact-links { grid-column: 1; grid-row: 1; flex-direction: column; align-items: flex-start; margin-top: 0; }
+}
+/* Keep navigation in the top-right corner when the name needs its own row. */
+@media (max-width: 600px) {
+  .site-header { flex-direction: column; align-items: stretch; gap: 20px; }
+  .site-nav { order: -1; }
 }
 @media (max-width: 370px) {
   body { padding: 18px; }

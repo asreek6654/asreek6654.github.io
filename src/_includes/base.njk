@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>{% if title != 'home' %}{{ title | escape }} · {% endif %}{{ site.name | escape }}</title>
+  <title>{% if page.url != '/' %}{{ title | escape }} · {% endif %}{{ site.name | escape }}</title>
   <meta name="description" content="{{ description or site.description | escape }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | url }}">
   <script src="{{ '/assets/theme.js' | url }}"></script>
@@ -15,16 +15,16 @@
   <a class="skip-link" href="#main">skip to content</a>
   <div class="site-shell">
     <header class="site-header">
-      {% if page.url == '/' %}<h1 class="site-name">{{ site.name | escape }}</h1>{% else %}<p class="site-name"><a href="{{ '/' | url }}">{{ site.name | escape }}</a></p>{% endif %}
-    <nav class="site-nav" aria-label="Main navigation">
-      {% for item in collections.navigation %}
-      <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.data.nav | escape }}</a>
-      {% endfor %}
-      <button class="theme-toggle" type="button" hidden aria-label="Switch to dark mode">
-        <span class="theme-moon">{{ icon('moon') }}</span><span class="theme-sun">{{ icon('sun') }}</span>
-        <span class="theme-label">dark</span>
-      </button>
-    </nav>
+      {% if page.url == '/' %}<h1 class="site-name">{{ site.name | escape }}</h1>{% endif %}
+      <nav class="site-nav" aria-label="Main navigation">
+        {% for item in collections.navigation %}
+        <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.data.nav | escape }}</a>
+        {% endfor %}
+        <button class="theme-toggle" type="button" hidden aria-label="Switch to dark mode">
+          <span class="theme-moon">{{ icon('moon') }}</span><span class="theme-sun">{{ icon('sun') }}</span>
+          <span class="theme-label">dark</span>
+        </button>
+      </nav>
     </header>
     <main class="site-main" id="main" tabindex="-1">
       <aside class="identity" aria-label="Profile and contact information">
