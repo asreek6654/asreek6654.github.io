@@ -15,6 +15,19 @@ A small academic website built with [Eleventy](https://www.11ty.dev/). Edit the 
 
 Most changes only touch the first three files. Avoid editing `dist/`: it is recreated on every build. The earlier mockups are outside this site's folder.
 
+## Style experiment and restoring the previous design
+
+The September 28 editorial style uses system serif headings, burgundy accents, and the existing sans-serif body text. Colors and the heading font are defined at the top of `src/assets/style.css`; there are no font downloads or new dependencies.
+
+The previous design is saved in Git at commit `8081cbdf9094dfb0cf45afeb418f631261297947` (also tagged locally as `design-before-editorial-2026-09-28`). To restore just its appearance while keeping your content and layout, run:
+
+```sh
+git restore --source=8081cbdf9094dfb0cf45afeb418f631261297947 -- src/assets/style.css src/assets/favicon.svg
+npm run build
+```
+
+Preview the result, then commit and publish as usual. No bio, publications, templates, or navigation files were changed for this experiment.
+
 ## Preview on your computer
 
 Install [Node.js](https://nodejs.org/) 24 LTS, then run these commands from this folder:
