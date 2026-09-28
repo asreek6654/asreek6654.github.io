@@ -11,7 +11,7 @@
   <script src="{{ '/assets/theme.js' | url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
 </head>
-<body class="{% if page.url == '/' %}page-home{% endif %}">
+<body class="{% if page.url == '/' %}page-home{% else %}page-standard{% endif %}">
   <a class="skip-link" href="#main">skip to content</a>
   <div class="site-shell">
     <header class="site-header">
@@ -27,6 +27,7 @@
       </nav>
     </header>
     <main class="site-main" id="main" tabindex="-1">
+      {% if page.url == '/' %}
       <aside class="identity" aria-label="Profile and contact information">
         <img class="portrait" src="{{ site.photo | url }}" alt="{{ site.name | escape }}" width="416" height="442">
         <div class="contact-links" aria-label="Contact links">
@@ -35,6 +36,7 @@
           {% if site.github %}<a class="contact-link" href="{{ site.github | escape }}" aria-label="GitHub" title="GitHub">{{ icon('github') }}</a>{% endif %}
         </div>
       </aside>
+      {% endif %}
       <div class="page-content">
         {{ content | safe }}
       </div>

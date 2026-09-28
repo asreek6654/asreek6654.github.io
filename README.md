@@ -77,7 +77,7 @@ Your text goes here.
 
 The `nav` line adds the tab automatically. `order` sets its position. The filename creates `/teaching/`; to choose another address, add `permalink: /another-name/` above the second `---`. Remove `nav` to keep a page available by URL without putting it in the menu. Remove the file to remove the page.
 
-Keep heading and tab text lowercase to match the current design. The shared layout, photo, links, theme toggle, and phone styling apply automatically.
+Keep heading and tab text lowercase to match the current design. New pages automatically use a single reading column with the shared header, navigation, theme toggle, and phone styling. The photo and contact icons appear only on the about page.
 
 ## Publish on GitHub Pages
 
