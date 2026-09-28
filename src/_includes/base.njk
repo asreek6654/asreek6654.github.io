@@ -1,0 +1,45 @@
+{% from "icons.njk" import icon %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{% if title != 'home' %}{{ title | escape }} · {% endif %}{{ site.name | escape }}</title>
+  <meta name="description" content="{{ description or site.description | escape }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | url }}">
+  <script src="{{ '/assets/theme.js' | url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+</head>
+<body class="{% if page.url == '/' %}page-home{% endif %}">
+  <a class="skip-link" href="#main">skip to content</a>
+  <div class="site-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+      {% for item in collections.navigation %}
+      <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.data.nav | escape }}</a>
+      {% endfor %}
+      <button class="theme-toggle" type="button" hidden aria-label="Switch to dark mode">
+        <span class="theme-moon">{{ icon('moon') }}</span><span class="theme-sun">{{ icon('sun') }}</span>
+        <span class="theme-label">dark</span>
+      </button>
+    </nav>
+    <main class="site-main" id="main" tabindex="-1">
+      <aside class="identity" aria-label="Profile and contact information">
+        <img class="portrait" src="{{ site.photo | url }}" alt="{{ site.name | escape }}" width="416" height="442">
+        <div class="profile-info">
+          {% if page.url == '/' %}<h1 class="profile-name">{{ site.name | escape }}</h1>{% else %}<p class="profile-name">{{ site.name | escape }}</p>{% endif %}
+          <p class="profile-role">{{ site.role | escape }}<br>{{ site.affiliation | escape }}</p>
+        </div>
+        <div class="contact-links" aria-label="Contact links">
+          {% if site.email %}<a class="button-link" href="mailto:{{ site.email | escape }}">{{ icon('email') }}email</a>{% endif %}
+          {% if site.scholar %}<a class="button-link" href="{{ site.scholar | escape }}">{{ icon('scholar') }}scholar</a>{% endif %}
+          {% if site.github %}<a class="button-link" href="{{ site.github | escape }}">{{ icon('github') }}github</a>{% endif %}
+        </div>
+      </aside>
+      <div class="page-content">
+        {{ content | safe }}
+      </div>
+    </main>
+  </div>
+</body>
+</html>

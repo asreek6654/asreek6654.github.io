@@ -1,0 +1,78 @@
+# Add papers here. Years are grouped automatically, newest first.
+# Within a year, papers appear in the order you put them in this file.
+# selected: true also shows a paper on the home page.
+# Add/remove any links you want: paper, code, slides, poster, video, etc.
+
+- title: Multi-Scale Datacenter Power Modulation
+  authors:
+    - Akshay Sreekumar
+    - Nicolas Christianson
+    - Fiodar Kazhamiaka
+    - Ram Rajagopal
+  year: 2026
+  venue: Preprint
+  links:
+    paper: https://arxiv.org/abs/2609.17809
+
+- title: Large-Scale Network Utility Maximization via GPU-Accelerated Proximal Message Passing
+  authors:
+    - Akshay Sreekumar
+    - Anthony Degleris
+    - Ram Rajagopal
+  year: 2025
+  venue: IEEE Control Systems Letters
+  selected: true
+  links:
+    paper: https://arxiv.org/abs/2509.10722
+    code: https://github.com/degleris1/zap
+
+- title: End-to-end electricity system forecasting via approximate message passing
+  authors:
+    - Anthony Degleris
+    - Akshay Sreekumar
+    - Kamran Tehranchi
+    - Ram Rajagopal
+  year: 2025
+  venue: ICLR Workshop on Tackling Climate Change with Machine Learning
+  selected: true
+  links:
+    paper: https://www.climatechange.ai/papers/iclr2025/59
+    poster: https://www.climatechange.ai/papers/iclr2025/59/poster.pdf
+
+- title: A Real-Time Limit Order Book as a Market Mechanism for Transactive Energy Systems
+  authors:
+    - Akshay Sreekumar
+    - Adhithyan Sakthivelu
+    - Rimvydas Baltaduonis
+    - Lynne Kiesling
+    - Seth Hoedl
+    - David P. Chassin
+  year: 2023
+  venue: IEEE Power & Energy Society General Meeting
+  links:
+    paper: https://arxiv.org/abs/2305.11464
+
+- title: "Auction Theory and Device Bidding Functions for Transactive Energy Systems: A Review"
+  authors:
+    - Akshay Sreekumar
+    - Adhithyan Sakthivelu
+    - Lynne Kiesling
+  year: 2023
+  venue: Current Sustainable/Renewable Energy Reports
+  links:
+    paper: https://doi.org/10.1007/s40518-023-00217-2
+
+- title: Printed, flexible, compact UHF-RFID sensor tags enabled by hybrid electronics
+  authors:
+    - Carol L. Baumbauer
+    - Matthew G. Anderson
+    - Jonathan Ting
+    - Akshay Sreekumar
+    - Jan M. Rabaey
+    - Ana C. Arias
+    - Arno Thielens
+  year: 2020
+  venue: Scientific Reports
+  links:
+    paper: https://www.nature.com/articles/s41598-020-73471-9
+    supplement: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41598-020-73471-9/MediaObjects/41598_2020_73471_MOESM1_ESM.pdf

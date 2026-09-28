@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: publications
+nav: publications
+order: 2
+permalink: /publications/
+---
+<header class="page-heading">
+  <h1 class="page-title">publications</h1>
+  {% if site.scholar %}<a href="{{ site.scholar | escape }}">google scholar ↗</a>{% endif %}
+</header>
+{% for group in publications | byYear %}
+<section class="publication-year" aria-labelledby="year-{{ group.year }}">
+  <h2 class="year-heading" id="year-{{ group.year }}">{{ group.year }}</h2>
+  {% for paper in group.papers %}{% include "paper.njk" %}{% endfor %}
+</section>
+{% endfor %}

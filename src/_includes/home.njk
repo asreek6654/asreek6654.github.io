@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+<div class="bio prose">{{ content | safe }}</div>
+{% set selectedPapers = publications | selected %}
+{% if selectedPapers.length %}
+<section class="selected-publications" aria-labelledby="selected-heading">
+  <div class="section-heading">
+    <h2 id="selected-heading">selected publications</h2>
+    <a class="more-link" href="{{ '/publications/' | url }}">all publications →</a>
+  </div>
+  {% for paper in selectedPapers %}{% include "paper.njk" %}{% endfor %}
+</section>
+{% endif %}
