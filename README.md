@@ -8,7 +8,7 @@ A small academic website built with [Eleventy](https://www.11ty.dev/). Edit the 
 | --- | --- |
 | Bio wording | `src/index.md` |
 | Papers, authors, years, paper/code/slides links | `src/_data/publications.yaml` |
-| Name, role, affiliation, email, Scholar, GitHub | `src/_data/site.yaml` |
+| Name, email, Scholar, GitHub | `src/_data/site.yaml` |
 | Photo | Replace `src/assets/portrait.jpg` |
 | New tab | Add a Markdown file in `src/`, as shown below |
 | Colors, spacing, font sizes | `src/assets/style.css` |
@@ -56,7 +56,7 @@ Only list materials you are ready to make public. This site does not scrape Goog
 
 ## Change the bio or add a tab
 
-The bio in `src/index.md` is ordinary Markdown. Blank lines separate paragraphs. Write a link as `[link text](https://example.com)`.
+The bio in `src/index.md` is ordinary Markdown. This is also where you update your role and affiliation. Blank lines separate paragraphs. Write a link as `[link text](https://example.com)`.
 
 To add a page such as teaching later, create `src/teaching.md`:
 
