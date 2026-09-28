@@ -15,7 +15,7 @@
   <a class="skip-link" href="#main">skip to content</a>
   <div class="site-shell">
     <header class="site-header">
-      {% if page.url == '/' %}<h1 class="site-name">{{ site.name | escape }}</h1>{% endif %}
+      {% if page.url == '/' %}<h1 class="site-name">{{ site.name | escape }}</h1>{% else %}<a class="site-label" href="{{ '/' | url }}">{{ site.name | escape }}</a>{% endif %}
       <nav class="site-nav" aria-label="Main navigation">
         {% for item in collections.navigation %}
         <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.data.nav | escape }}</a>
@@ -30,9 +30,9 @@
       <aside class="identity" aria-label="Profile and contact information">
         <img class="portrait" src="{{ site.photo | url }}" alt="{{ site.name | escape }}" width="416" height="442">
         <div class="contact-links" aria-label="Contact links">
-          {% if site.email %}<a class="button-link" href="mailto:{{ site.email | escape }}">{{ icon('email') }}email</a>{% endif %}
-          {% if site.scholar %}<a class="button-link" href="{{ site.scholar | escape }}">{{ icon('scholar') }}scholar</a>{% endif %}
-          {% if site.github %}<a class="button-link" href="{{ site.github | escape }}">{{ icon('github') }}github</a>{% endif %}
+          {% if site.email %}<a class="contact-link" href="mailto:{{ site.email | escape }}" aria-label="Email" title="Email">{{ icon('email') }}</a>{% endif %}
+          {% if site.scholar %}<a class="contact-link" href="{{ site.scholar | escape }}" aria-label="Google Scholar" title="Google Scholar">{{ icon('scholar') }}</a>{% endif %}
+          {% if site.github %}<a class="contact-link" href="{{ site.github | escape }}" aria-label="GitHub" title="GitHub">{{ icon('github') }}</a>{% endif %}
         </div>
       </aside>
       <div class="page-content">
