@@ -28,7 +28,9 @@ npm run build
 
 To restore the intermediate serif-and-burgundy design instead, use commit `0c25432e05faa163266a5cfd8ff56bd6d05f9925` in that command (also tagged locally as `design-editorial-2026-09-28`). Preview the result, then commit and publish as usual. These style changes leave bio wording, publications, and navigation unchanged.
 
-The about-page name has slightly larger, blue italic serif initials. They are derived automatically from `name` in `site.yaml`, with styling in `.name-word` and `.name-initial`. To remove only this name treatment and keep the blue technical design, restore `src/_includes/base.njk` and `src/assets/style.css` from commit `40755de1eb21a09752b146f40f8a9173690c1e55` (local tag `design-before-name-initials-2026-09-29`).
+The about-page name has slightly larger italic serif initials in the same text color as the rest of the name. They are derived automatically from `name` in `site.yaml`, with styling in `.name-word` and `.name-initial`. To remove only this name treatment and keep the blue technical design, restore `src/_includes/base.njk` and `src/assets/style.css` from commit `40755de1eb21a09752b146f40f8a9173690c1e55` (local tag `design-before-name-initials-2026-09-29`).
+
+The blue-initials alternative is saved at commit `ddc570c417346b96fcd6f5d9f405f57015e534af` (local tag `design-blue-initials-2026-09-29`). To bring back only that color treatment, add `color: var(--link);` to `.name-initial` in the stylesheet.
 
 ## Preview on your computer
 
