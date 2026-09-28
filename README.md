@@ -17,7 +17,7 @@ Most changes only touch the first three files. Avoid editing `dist/`: it is recr
 
 ## Style experiment and restoring the previous design
 
-The September 28 editorial style uses system serif headings, burgundy accents, and the existing sans-serif body text. Colors and the heading font are defined at the top of `src/assets/style.css`; there are no font downloads or new dependencies.
+The current style uses IBM Plex Sans for body text and IBM Plex Mono for uppercase section headings and years, with blue links and a divider above selected publications. Colors and font names are defined in `:root` in `src/assets/style.css`. The font files and their licenses live in `src/assets/fonts/` and are served by the site itself; there is no external font service or new build dependency. Keep writing headings normally: CSS makes section headings uppercase while navigation labels stay lowercase.
 
 The previous design is saved in Git at commit `8081cbdf9094dfb0cf45afeb418f631261297947` (also tagged locally as `design-before-editorial-2026-09-28`). To restore just its appearance while keeping your content and layout, run:
 
@@ -26,7 +26,7 @@ git restore --source=8081cbdf9094dfb0cf45afeb418f631261297947 -- src/assets/styl
 npm run build
 ```
 
-Preview the result, then commit and publish as usual. No bio, publications, templates, or navigation files were changed for this experiment.
+To restore the intermediate serif-and-burgundy design instead, use commit `0c25432e05faa163266a5cfd8ff56bd6d05f9925` in that command (also tagged locally as `design-editorial-2026-09-28`). Preview the result, then commit and publish as usual. These style changes leave bio wording, publications, and navigation unchanged.
 
 ## Preview on your computer
 
@@ -90,7 +90,7 @@ Your text goes here.
 
 The `nav` line adds the tab automatically. `order` sets its position. The filename creates `/teaching/`; to choose another address, add `permalink: /another-name/` above the second `---`. Remove `nav` to keep a page available by URL without putting it in the menu. Remove the file to remove the page.
 
-Keep heading and tab text lowercase to match the current design. New pages automatically use a single reading column with the shared header, navigation, theme toggle, and phone styling. The photo and contact icons appear only on the about page.
+Keep tab text lowercase to match the current navigation. Page and section headings display in uppercase automatically. New pages use a single reading column with the shared header, navigation, theme toggle, and phone styling. The photo and contact icons appear only on the about page.
 
 ## Publish on GitHub Pages
 
