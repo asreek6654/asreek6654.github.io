@@ -58,7 +58,7 @@ svg { flex-shrink: 0; }
 /* Shared navigation and profile. Add pages through their Markdown header. */
 .site-header { display: flex; align-items: center; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--header-rule); }
 .page-title, .section-heading h2, .prose h2 { font-family: var(--display-font); text-transform: uppercase; }
-.site-name { font-size: 2.375rem; font-weight: 500; line-height: 1.2; letter-spacing: -.8px; margin: 0; }
+.site-name { font-size: 2.375rem; font-weight: 500; line-height: 1.2; letter-spacing: -.8px; margin: 0; color: var(--link); }
 /* Journal-style initials, only on the about page's main name. */
 .name-word { display: inline-block; white-space: nowrap; }
 .name-initial { font-family: Georgia, "Times New Roman", serif; font-style: normal; font-size: 1.36em; font-weight: 700; letter-spacing: 0; margin-right: .015em; color: var(--link); }
