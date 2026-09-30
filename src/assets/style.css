@@ -61,7 +61,7 @@ svg { flex-shrink: 0; }
 .site-name { font-size: 2.375rem; font-weight: 500; line-height: 1.2; letter-spacing: -.8px; margin: 0; color: var(--link); }
 /* Journal-style initials, only on the about page's main name. */
 .name-word { display: inline-block; white-space: nowrap; }
-.name-initial { font-family: Georgia, "Times New Roman", serif; font-style: normal; font-size: 1.36em; font-weight: 700; letter-spacing: 0; margin-right: .015em; color: var(--link); }
+.name-initial { font-family: Georgia, "Times New Roman", serif; font-style: normal; font-size: 1.36em; font-weight: 700; letter-spacing: 0; margin-right: .015em; }
 .site-label { font-size: 1.125rem; font-weight: 500; line-height: 1.4; color: var(--ink); }
 .site-nav { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 8px 25px; margin-left: auto; }
 .site-nav a, .theme-toggle { color: var(--soft); font-size: .875rem; }
