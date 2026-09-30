@@ -82,7 +82,7 @@ Add `award` alongside `venue`, `year`, and `selected` (not inside `links`):
     slides: /assets/slides/my-talk.pdf
 ```
 
-The award appears as a box beside the paper/code/slides links. Without a URL it is a non-clickable label. If you have an official award announcement, optionally add `award_url: https://example.com/awards` at the same indentation as `award`. Leave `award_url` out when there is no useful destination. You can use any award wording, such as `"Best Paper Finalist"`. Remove `award` to hide the box; an award also works on an entry with no resource links.
+The award appears first, before the paper/code/slides links, in a gold box with a trophy emoji after the text. The emoji is added automatically; keep only the wording in YAML. Without a URL it is a non-clickable label. If you have an official award announcement, optionally add `award_url: https://example.com/awards` at the same indentation as `award`. Leave `award_url` out when there is no useful destination. You can use any award wording, such as `"Best Paper Finalist"`. Remove `award` to hide the box; an award also works on an entry with no resource links.
 
 ### Upload a PDF or replace the photo
 

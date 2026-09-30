@@ -82,6 +82,13 @@ svg { flex-shrink: 0; }
 .button-link { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--rule); border-radius: 2px; padding: 3px 9px; min-height: 30px; color: var(--link); font-size: .8125rem; line-height: 1.5; }
 .button-link .icon { width: 14px; height: 14px; }
 a.button-link:hover { background: var(--hover); text-decoration: none; }
+.award-badge {
+  color: light-dark(#755014, #f2ce82);
+  border-color: light-dark(#d5bb7c, #806732);
+  background: light-dark(#fff4d8, #352e20);
+  --hover: light-dark(#f6e7ba, #463a24);
+  font-weight: 500;
+}
 
 /* Bio and regular Markdown pages. */
 .page-content { min-width: 0; grid-column: 1; grid-row: 1; }

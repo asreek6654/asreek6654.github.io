@@ -5,16 +5,16 @@
   <p class="venue">{{ paper.venue | escape }}, {{ paper.year }}</p>
   {% if paper.links or paper.award %}
   <div class="paper-links" role="group" aria-label="Resources and awards for {{ paper.title | escape }}">
+    {% if paper.award %}
+      {% if paper.award_url %}
+    <a class="button-link award-badge" href="{{ paper.award_url | url | escape }}">{{ paper.award | escape }} <span aria-hidden="true">🏆</span></a>
+      {% else %}
+    <span class="button-link award-badge">{{ paper.award | escape }} <span aria-hidden="true">🏆</span></span>
+      {% endif %}
+    {% endif %}
     {% for label, link in paper.links %}{% if link %}
     <a class="button-link" href="{{ link | url | escape }}">{{ icon(label) }}{{ label | escape }}</a>
     {% endif %}{% endfor %}
-    {% if paper.award %}
-      {% if paper.award_url %}
-    <a class="button-link" href="{{ paper.award_url | url | escape }}">{{ paper.award | escape }}</a>
-      {% else %}
-    <span class="button-link">{{ paper.award | escape }}</span>
-      {% endif %}
-    {% endif %}
   </div>
   {% endif %}
 </article>

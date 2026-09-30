@@ -2,7 +2,19 @@
 # Within a year, papers appear in the order you put them in this file.
 # selected: true also shows a paper on the home page.
 # Add/remove any links you want: paper, code, slides, poster, video, etc.
-# Optional award: "Best Paper" adds a box; award_url makes it a link.
+
+- title: "DCEmbed: Scalable Optimization over Neural Surrogates"
+  authors:
+    - Akshay Sreekumar
+    - Nicolas Christianson
+    - Priya L. Donti
+    - Ellen Vitercik
+    - Ram Rajagopal
+  year: 2026
+  venue: Preprint
+  selected: true
+  links:
+    paper: https://arxiv.org/abs/2609.33879
 
 - title: Multi-Scale Datacenter Power Modulation
   authors:
@@ -12,6 +24,7 @@
     - Ram Rajagopal
   year: 2026
   venue: Preprint
+  selected: true
   links:
     paper: https://arxiv.org/abs/2609.17809
 
@@ -24,8 +37,9 @@
   venue: IEEE Control Systems Letters
   selected: true
   links:
-    paper: https://arxiv.org/abs/2509.10722
+    paper: https://ieeexplore.ieee.org/document/11615756
     code: https://github.com/degleris1/zap
+    talk: /assets/slides/ACC_2026_NUM_Talk.pdf
 
 - title: End-to-end electricity system forecasting via approximate message passing
   authors:
@@ -50,8 +64,9 @@
     - David P. Chassin
   year: 2023
   venue: IEEE Power & Energy Society General Meeting
+  award: "Best Paper"
   links:
-    paper: https://arxiv.org/abs/2305.11464
+    paper: https://ieeexplore.ieee.org/document/10252385
 
 - title: "Auction Theory and Device Bidding Functions for Transactive Energy Systems: A Review"
   authors:
