@@ -2,6 +2,7 @@
 # Within a year, papers appear in the order you put them in this file.
 # selected: true also shows a paper on the home page.
 # Add/remove any links you want: paper, code, slides, poster, video, etc.
+# Optional award: "Best Paper" adds a box; award_url makes it a link.
 
 - title: Multi-Scale Datacenter Power Modulation
   authors:

@@ -3,11 +3,18 @@
   <h3>{% if paper.links.paper %}<a href="{{ paper.links.paper | url | escape }}">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
   <p class="authors">{% for author in paper.authors %}{% if author == site.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</p>
   <p class="venue">{{ paper.venue | escape }}, {{ paper.year }}</p>
-  {% if paper.links %}
-  <div class="paper-links" aria-label="Resources for {{ paper.title | escape }}">
+  {% if paper.links or paper.award %}
+  <div class="paper-links" role="group" aria-label="Resources and awards for {{ paper.title | escape }}">
     {% for label, link in paper.links %}{% if link %}
     <a class="button-link" href="{{ link | url | escape }}">{{ icon(label) }}{{ label | escape }}</a>
     {% endif %}{% endfor %}
+    {% if paper.award %}
+      {% if paper.award_url %}
+    <a class="button-link" href="{{ paper.award_url | url | escape }}">{{ paper.award | escape }}</a>
+      {% else %}
+    <span class="button-link">{{ paper.award | escape }}</span>
+      {% endif %}
+    {% endif %}
   </div>
   {% endif %}
 </article>

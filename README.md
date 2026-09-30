@@ -64,6 +64,26 @@ Replace the example text and links with your actual material.
 - Use your name exactly as it appears in `site.yaml` to highlight it among the authors.
 - Remove an entire entry to remove a paper. Google Scholar does not synchronize automatically.
 
+### Add an award box
+
+Add `award` alongside `venue`, `year`, and `selected` (not inside `links`):
+
+```yaml
+- title: "Your paper title"
+  authors:
+    - Akshay Sreekumar
+    - Coauthor Name
+  year: 2026
+  venue: Your conference name
+  selected: true
+  award: "Best Paper"
+  links:
+    paper: https://example.com/your-paper
+    slides: /assets/slides/my-talk.pdf
+```
+
+The award appears as a box beside the paper/code/slides links. Without a URL it is a non-clickable label. If you have an official award announcement, optionally add `award_url: https://example.com/awards` at the same indentation as `award`. Leave `award_url` out when there is no useful destination. You can use any award wording, such as `"Best Paper Finalist"`. Remove `award` to hide the box; an award also works on an entry with no resource links.
+
 ### Upload a PDF or replace the photo
 
 Put downloadable files inside `src/assets/`, for example `src/assets/slides/my-talk.pdf`. A publication link then uses `/assets/slides/my-talk.pdf`. Use simple filenames without spaces; filename capitalization must match exactly.

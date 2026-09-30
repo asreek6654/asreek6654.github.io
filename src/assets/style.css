@@ -81,7 +81,7 @@ svg { flex-shrink: 0; }
 .contact-link:hover { color: var(--link); text-decoration: none; }
 .button-link { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--rule); border-radius: 2px; padding: 3px 9px; min-height: 30px; color: var(--link); font-size: .8125rem; line-height: 1.5; }
 .button-link .icon { width: 14px; height: 14px; }
-.button-link:hover { background: var(--hover); text-decoration: none; }
+a.button-link:hover { background: var(--hover); text-decoration: none; }
 
 /* Bio and regular Markdown pages. */
 .page-content { min-width: 0; grid-column: 1; grid-row: 1; }
