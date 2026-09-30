@@ -9,7 +9,7 @@
   <meta name="description" content="{{ (description or site.description) | escape }}">
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | url }}">
   <script src="{{ '/assets/theme.js' | url }}"></script>
-  <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | versionedAsset | url }}">
 </head>
 <body class="{% if page.url == '/' %}page-home{% else %}page-standard{% endif %}">
   <a class="skip-link" href="#main">skip to content</a>
